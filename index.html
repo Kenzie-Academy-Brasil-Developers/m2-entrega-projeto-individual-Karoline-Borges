@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOXICONS CSS -->
+    <link 
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- TOASTIFY -->
+    <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <!-- CSS GLOBALS -->
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/colors.css">
+    <link rel="stylesheet" href="./src/styles/flex.css">
+    <link rel="stylesheet" href="./src/styles/fonts.css">
+    <link rel="stylesheet" href="./src/styles/grid.css">
+    <link rel="stylesheet" href="./src/styles/inputs.css">
+    <link rel="stylesheet" href="./src/styles/margins.css">
+    <link rel="stylesheet" href="./src/styles/sidebar.css">
+    <link rel="stylesheet" href="./src/styles/menu.css">
+    <link rel="stylesheet" href="./src/styles/darkMode.css">
+    <link rel="stylesheet" href="./src/pages/modals/modal.css">
+
+    <!-- CSS PAGES -->
+    <link rel="stylesheet" href="./src/pages/homePage/index.css">
+
+    <title>Kenzie Empresas</title>
+</head>
+<body class="bg-body-color">
+    <nav class="sidebar close bg-sidebar-color">
+        <header>
+            <div class="image-text flex">
+                <span class="image flex">
+                    <img class="bg-color-logo" src="./src/assets/LogoBranco.png" alt="logo">
+                </span>
+                <div class="text font-text-2 header-text flex text-color">
+                    <span class="name font-text-1">Karoline</span>
+                    <span class="profession">Sênior</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle flex bg-color-primary sidebar-color'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box bg-color-primary-light">
+                    <i class='bx bx-search icon'></i>
+                    <input 
+                    class="bg-color-primary-light font-text-2"
+                    type="search"
+                    placeholder="Search..."
+                    />
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="font-text-2 text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link user">
+                        <a href="#">
+                            <i class='bx bx-store-alt icon'></i>
+                            <span class="font-text-2 text nav-text">Department</span>
+                        </a>
+                    </li>
+                    <li class="nav-link admin">
+                        <a href="#">
+                            <i class='bx bx-sitemap icon'></i>
+                            <span class="font-text-2 text nav-text">Sectors</span>
+                        </a>
+                    </li>
+                    <li class="nav-link admin">
+                        <a href="#">
+                            <i class='bx bx-buildings icon'></i>
+                            <span class="font-text-2 text nav-text">Companys</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <!-- <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="font-text-2 text nav-text">Logout</span>
+                    </a>
+                </li> -->
+                <li class="btn-login">
+                    <a href="#">
+                        <i class='bx bx-log-in icon'></i>
+                        <span class="font-text-2 text nav-text">Login</span>
+                    </a>
+                </li>
+                <li class="btn-signup">
+                    <a href="#">
+                        <i class='bx bx-user-plus icon'></i>
+                        <span class="font-text-2 text nav-text">Sign Up</span>
+                    </a>
+                </li>
+                <li class="mode bg-color-primary-light">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch flex bg-color-primary-light">
+                        <span class="switch bg-toggle-color"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="structure bg-body-color m-1">
+        <article class="content article">
+            <h1 class="article__title">Listas de Empresas Parceiras</h1>
+            <!-- 
+            <ul>
+                <li>
+                    <h3>Skina Lanches</h3>
+                    <small>Alimenticio</small>
+                    <p>Podrão de qualidade</p>
+                    <span>Abre às 09:00</span>
+                </li>
+            </ul> -->
+        </article>
+
+        <footer class="footer">
+
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/pages/sidebar.js"></script>
+    <script type="module" src="./src/pages/homePage/home.js"></script>
+</body>
+</html>
