@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOXICONS CSS -->
+    <link 
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- TOASTIFY -->
+    <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./src/pages/deshboard/deshboard.css">
+
+    <title>Kenzie Empresas - Deshboard</title>
+</head>
+<body class="bg-body-color">
+    <div class="sidebar">
+        <div class="logo-details">
+            <img class="logo" src="./src/assets/LogoBranco.png" alt="Logo">
+            <span class="logo_name">Kenzie Empresas</span>
+        </div>
+        <ul class="nav-links">
+            <li class="dashboard-btn">
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dashboard</a></li>
+                </ul>
+
+            </li>
+            <li class="btn-login">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-log-in icon'></i>
+                        <span class="link_name">Login</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Login</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="btn-signup">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-user-plus icon'></i>
+                        <span class="link_name">Sign Up</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Sign Up</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img class="profile" src="./src/assets/LogoBranco.png" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Prem Shahi</div>
+                        <div class="job">Web Desginer</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu' ></i>
+            <span class="text">Drop Down Sidebar</span>
+        </div>
+        <article class="article">
+            <h1 class="article__title"></h1>
+        </article>
+        <aside class="aside"></aside>
+    </section>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/pages/deshboard/deshboard.js"></script>
+    <script type="module" src="./src/pages/homePage/home.js"></script>
+</body>
+</html>

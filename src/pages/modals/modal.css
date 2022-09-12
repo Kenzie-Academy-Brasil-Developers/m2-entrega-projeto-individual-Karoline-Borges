@@ -1,0 +1,40 @@
+.model{
+    background-color: red;
+    width: 100vh;
+    height: 100vh;
+    position: fixed;
+    animation: appearFrom 1s;
+}
+.close-modal{
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: blue;
+}
+.disappear{
+    animation: disappearFrom 1s;
+}
+
+@keyframes appearFrom {
+    0% {
+        opacity: 0;
+        transform: translate(50%, -0%);
+    }
+
+    100% {
+        opacity: 1;
+        transition: translate(0, 0);
+    }
+}
+@keyframes disappearFrom {
+    0% {
+        opacity: 1;
+        transition: translate(0, 0);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translate(50%, -0%);
+    }
+}
+
+
