@@ -1,3 +1,5 @@
+import { List } from '../deshboard/list.js'
+import { RenderDeshboard } from '../deshboard/render.js'
 import { Modal } from '../modals/modal.js'
 import { Requests } from '../requests.js'
 export class Index {
@@ -118,6 +120,95 @@ export class Index {
             setTimeout(() => {
                 modal.remove()
             },1000)
+        })
+    }
+
+    //  ====== REGISTER COMPANY MODAL ======
+    static registerCompanyModal() {
+        const register = document.querySelector('.register-company-btn')
+
+        register.addEventListener('click', () => {
+            const newregisterModal = Modal.registerCompany()
+            
+            Modal.template(newregisterModal)
+            this.closeModal()
+            this.handleRegisterCompany()
+        })
+    }
+
+    static handleRegisterCompany() {
+        const nameInput         = document.getElementById('company-name-input');
+        const timeInput     = document.getElementById('time');
+        const descriptionInput            = document.getElementById('description-input');
+        const selectSector         = document.getElementById('select-sectores');
+        const registerBtn          = document.querySelector('.btn-input-register');
+
+        registerBtn.addEventListener('click', async (event) => {
+            event.preventDefault()
+
+            const sector    = selectSector.value
+            const idSector  = await List.callSectores(sector)
+
+            const data = {
+                name: nameInput.value,
+                "opening_hours": timeInput.value,
+                description: descriptionInput.value,
+                "sector_uuid": idSector,
+            };
+
+            const register = await Requests.registerCompany(data)
+
+        })
+    }
+
+     //  ====== CREATE DESCRIPTION MODAL ======
+    static createDescriptionModal() {
+        const create = document.querySelector('.create-department-btn')
+
+        create.addEventListener('click', () => {
+            const createDescriptionModal = Modal.createDescription()
+            const newcreateDescriptionModal = List.addList(createDescriptionModal)
+            
+            Modal.template(newcreateDescriptionModal)
+            this.closeModal()
+            this.handlecreateDescription()
+        })
+    }
+
+    static handlecreateDescription() {
+        const nameInput         = document.getElementById('department-name-input');
+        const descriptionInput            = document.getElementById('description-input');
+        const selectDescription         = document.getElementById('select-description');
+        const createDescriptionBtn          = document.querySelector('.btn-input-create-description');
+
+        createDescriptionBtn.addEventListener('click', async (event) => {
+            event.preventDefault()
+
+            const create    = selectDescription.value
+            const idcompany  = await List.callSectores(create)
+
+            const data = {
+                name: nameInput.value,
+                description: descriptionInput.value,
+                "company_uuid": idcompany,
+            };
+
+            const register = await Requests.createDescription(data)
+
+        })
+    }
+    //=========
+    static handleInputOption() {
+        const loginBtn = document.querySelector('#lebel-sectores')
+        
+        loginBtn.addEventListener('click', () => {
+
+            const newRender = RenderDeshboard.templateInputOption(newRender)
+            RenderDeshboard.templateInputOption(newLoginModal)
+
+            console.log(newRender);
+            this.closeModal()
+            this.handleLogin()
         })
     }
 }
