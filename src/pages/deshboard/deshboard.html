@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOXICONS CSS -->
+    <link 
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- TOASTIFY -->
+    <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <!-- CSS GLOBALS -->
+    <!-- <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/colors.css">
+    <link rel="stylesheet" href="../../styles/flex.css">
+    <link rel="stylesheet" href="../../styles/fonts.css">
+    <link rel="stylesheet" href="../../styles/grid.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="../../styles/margins.css">
+    <link rel="stylesheet" href="../../styles/sidebar.css">
+    <link rel="stylesheet" href="../../styles/menu.css">
+    <link rel="stylesheet" href="../../styles/darkMode.css">
+    <link rel="stylesheet" href="../../pages/modals/modal.css"> -->
+
+    <!-- CSS PAGES -->
+    <link rel="stylesheet" href="./deshboard.css">
+
+    <title>Kenzie Empresas - Deshboard</title>
+</head>
+<body class="">
+    
+    <div class="sidebar">
+        <div class="logo-details">
+            <img class="logo" src="../../assets/LogoBranco.png" alt="Logo">
+            <span class="logo_name">Kenzie Empresas</span>
+        </div>
+        <ul class="nav-links">
+            <li class="dashboard-btn">
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dashboard</a></li>
+                </ul>
+            </li>
+            <li class="user">
+                <div class="iocn-link">
+                    <a  href="#">
+                        <i class='bx bx-sitemap'></i>
+                        <span class="link_name">Sectors</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li class="sectors-btn"><a class="link_name" href="#">Sectors</a></li>
+                    <li class="alimenticio-btn"><a href="#">Alimentício</a></li> <!-- Alimenticio -->
+                    <li class="varejo-btn"><a href="#">Varejo</a></li> <!-- Varejo -->
+                    <li class="textil-btn"><a href="#">Têxtil</a></li> <!-- Textil -->
+                    <li class="manufatura-btn"><a href="#">Manufatura</a></li> <!-- Manufatura -->
+                    <li class="aeroespacial-btn"><a href="#">Aeroespacial</a></li> <!-- Aeroespacial -->
+                    <li class="automotiva-btn"><a href="#">Automotiva</a></li> <!-- Automotiva -->
+                    <li class="ti-btn"><a href="#">TI</a></li> <!-- TI -->
+                    <li class="atacado-btn"><a href="#">Atacado</a></li> <!-- Atacado -->
+                </ul>
+            </li>
+            <li class="admin">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-buildings'></i>
+                        <span class="link_name">Companys</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li class="companys-btn"><a class="link_name" href="#">Companys</a></li>
+                    <li class="register-company-btn"><a href="#">Register Company</a></li>
+                </ul>
+            </li>
+            <li class="admin">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-store-alt'></i>
+                        <span class="link_name">Department</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li class="department-btn"><a class="link_name" href="#">Department</a></li>
+                    <li class="create-department-btn"><a href="#">Create Department</a></li>
+                    <li class="hire-employee-btn"><a href="#">Hire Employee</a></li>
+                    <li class="dismiss-Employee-btn"><a href="#">Dismiss Employee</a></li>
+                    <li class="edit-department-btn"><a href="#">Edit Department</a></li>
+                    <li class="delete-department-btn"><a href="#">Delete Department</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img class="profile" src="../../assets/user-regular-24.png" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Prem Shahi</div>
+                        <div class="job">Web Desginer</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu' ></i>
+            <span class="text">Drop Down Sidebar</span>
+        </div>
+        <article class="article">
+            <h1 class="article__title">oi</h1>
+        </article>
+        <aside class="aside"></aside>
+    </section>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./deshboard.js"></script>
+</body>
+</html>

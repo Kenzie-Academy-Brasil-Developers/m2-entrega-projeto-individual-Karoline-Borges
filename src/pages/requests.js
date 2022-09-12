@@ -56,4 +56,212 @@ export class Requests {
 
         return userSignup
     }
+
+    // ===  USER ===
+    static async search() {
+        const userInformation = await instance
+            .get('/users/profile')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        console.log(userInformation);
+        return userInformation
+    }
+
+    // ===  FUNCIONÁRIO ===
+    static async listAllEmployees() {
+        const employees = await instance
+            .get('/users/departments/coworkers')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        console.log(employees);
+        return employees
+    }
+
+    static async listAllDepartments() {
+        const departments = await instance
+            .get('/users/departments')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+        
+        console.log(departments);
+        return departments
+    }
+
+    static async editUserData(data) {
+        const  editUser = await instance
+            .patch('/users', data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Atualização realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(editUser);
+        return editUser
+    }
+
+    // ===  ADMIN ===
+    static async ListAllUsers() {
+        const listUser = await instance
+            .get('/users')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        return listUser
+    }
+
+    static async usersNotDepartment() {
+        const notDepartment = await instance
+            .get('/admin/out_of_work')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        return notDepartment
+    }
+
+    static async updataEmployeeInf(data, idUser) {
+        const updataEmployee = await instance
+            .ptch(`/admin/update_user/${idUser}`, data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Atualização realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(updataEmployee);
+        return updataEmployee
+    }
+
+    static async deleteUser(idUser) {
+        const delet = await instance
+            .delete(`/admin/delete_user/${idUser}`)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Atualização realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(delet);
+        return delet
+    }
+
+    // ===  ADMIN COMPANY ===
+    static async registerCompany(data) {
+        const register = await instance
+            .post('/companies', data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Cadastro realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        return register
+    }
+    
+    // ===  ADMIN SECTORS ===
+    static async listAllSectors() {
+        const sector = await instance
+            .get('/sectors')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        return sector
+    }
+    // ===  ADMIN DEPARTMENT ===
+    static async listAllDepartmentsAdmin() {
+        const listDepartment = await instance
+            .get('/departments')
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        return listDepartment
+    }
+
+    static async departmentsOfCompany(id) {
+        const department = await instance
+            .get(`/departments/${id}`)
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        console.log(department);
+        return department
+    }
+
+    static async createDepartment(data) {
+        const  create = await instance
+            .post('/departments', data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Criação realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(create);
+        return create
+    }
+
+    static async contradictOfficial(data) {
+        const contradict = await instance
+            .patch('/departments/hire', data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Contratação realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(contradict);
+        return contradict
+    }
+
+    static async dismissalOfEmployees(data, id) {
+        const dismissal = await instance
+            .patch(`/departments/dismiss/${id}`, data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Demissão realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(dismissal);
+        return dismissal
+    }
+    static async editDepartment(data, id) {
+        const editDepartment = await instance
+            .patch(`/departments${id}`, data)
+            .then((resp) => {
+                console.log(resp)
+                Toast.create('Atualização realizada com sucesso', 'green')
+            })
+            .catch(err => {
+                Toast.create(err.response.data.error, '#FF0000')
+            })
+
+        console.log(editDepartment);
+        return editDepartment
+    }
+    static async deleteDepartment(id) {
+        const delet = await instance
+            .delete(`/departments/${id}`)
+            .then(resp => resp.data)
+            .catch(err => console.log(err))
+
+        console.log(delet);
+        return delet
+    }
 }
