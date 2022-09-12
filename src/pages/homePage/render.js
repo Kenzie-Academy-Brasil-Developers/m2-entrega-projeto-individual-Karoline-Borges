@@ -4,7 +4,7 @@ import { Requests } from "../requests.js"
 export class Render {
     static list(array, title) {
         array.forEach(element => {
-            const card = create.createCardCompany(element)
+            const card = Create.createCardCompany(element)
             Modal.template(card, title)
         });
     }
@@ -40,7 +40,7 @@ export class Render {
     }
 }
 
-export class create {
+export class Create {
     static createCardCompany(array) {
         const ulTag             = document.createElement('ul');
         const liTag             = document.createElement('li');
