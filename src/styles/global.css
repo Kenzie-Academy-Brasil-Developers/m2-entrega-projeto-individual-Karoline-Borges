@@ -1,0 +1,143 @@
+:root {
+    --color-primary: #5073fb;
+    --color-hover: rgba(0, 0, 0, 0.2);
+    --color-white: #F8F9FA;
+    --toggle-color: #FFF;
+    --text-color: #CCC;
+    --body-color: #18191A;
+    --sidebar-color: #242526;
+}
+
+
+.lock {
+    color: #5073fb;
+    background-color: rgba(80, 115, 251, .2);
+}
+
+.bell {
+    color: #f1d243;
+    background-color: rgba(241, 210, 67, .2);
+}
+
+.chat {
+    color: #70d7a5;
+    background-color: rgba(112, 215, 165, .2);
+}
+
+.icon-0 {
+    color: #5073fb;
+}
+
+.icon-1 {
+    color: #c5bc58;
+}
+
+.icon-2 {
+    color: #a280e9;
+}
+
+.icon-3 {
+    color: #85ade3;
+}
+
+.icon-4 {
+    color: #e36ac8;
+}
+
+.icon-5 {
+    color: #70d7a5;
+}
+
+.icon-6 {
+    color: #5f5ce0;
+}
+
+.icon-7 {
+    color: #e86786;
+}
+
+.icon-8 {
+    color: #f1d243;
+}
+
+.stat--icon {
+    color: #5f5ce0;
+}
+
+.up--arrow {
+    color: #70d7a5;
+}
+
+.down--arrow {
+    color: #e86786;
+}
+
+.card--icon {
+    margin-right: 5px;
+}
+
+.card-1 {
+    background-color: rgba(80, 115, 251, .1);
+}
+
+.card-1 .card--title {
+    color: rgba(80, 115, 251, 1);
+}
+
+.card-1 .card--icon--lg {
+    color: rgba(80, 115, 251, .4);
+}
+
+.card-2 {
+    background-color: rgba(241, 210, 67, .1);
+}
+
+.card-2 .card--title {
+    color: rgba(241, 210, 67, 1);
+}
+
+.card-2 .card--icon--lg {
+    color: rgba(241, 210, 67, .4);
+}
+
+.card-3 {
+    background-color: rgba(112, 215, 165, .1);
+}
+
+.card-3 .card--title {
+    color: rgba(112, 215, 165, 1);
+}
+
+.card-3 .card--icon--lg {
+    color: rgba(112, 215, 165, .4);
+}
+
+.card-4 {
+    background-color: rgba(227, 106, 200, .1);
+}
+
+.card-4 .card--title {
+    color: rgba(227, 106, 200, 1);
+}
+
+.card-4 .card--icon--lg {
+    color: rgba(227, 106, 200, .4);
+}
+
+
+.free {
+    color: #70d7a5;
+}
+
+.scheduled {
+    color: #5073fb;
+}
+
+.edit {
+    color: #70d7a5;
+    margin-right: 10px;
+}
+
+.delete {
+    color: #e86786;
+}

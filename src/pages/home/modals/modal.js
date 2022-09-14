@@ -1,17 +1,14 @@
-import { List } from "../deshboard/list.js"
+import { List } from '../page/list.js'
 
 export class Modal {
-    static template(form, title) {
+    static template(form) {
         const section = document.createElement('section')
-        const articleTitle = document.querySelector('.article__title')
-        const article = document.querySelector('.article')
+        const divMain = document.querySelector('.modal--container')
 
-        article.innerHtml       = ''
-        articleTitle.innerText  = title
         section.classList.add('modal')
 
         section.append(form)
-        article.append(section)
+        divMain.append(section)
     }
 
     static loginForm() {
@@ -22,7 +19,6 @@ export class Modal {
         const inputEmail        = document.createElement('input');
         const InputPassword     = document.createElement('input');
         const buttonLogin       = document.createElement('button');
-        // const buttonSignup      = document.createElement('button');
 
         h3Modal.innerText = 'Login'
 

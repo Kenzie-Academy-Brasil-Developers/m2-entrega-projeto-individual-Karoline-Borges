@@ -1,4 +1,4 @@
-import { Requests } from "../requests.js";
+import { Requests } from "../../API/requests.js"
 
 export class List {
     static async callSectores(sector) {

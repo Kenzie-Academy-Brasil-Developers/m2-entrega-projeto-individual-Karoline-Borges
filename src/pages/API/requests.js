@@ -1,5 +1,5 @@
-import { instance } from '../pages/axios.js'
-import { Toast } from '../pages/toast.js'
+import { instance } from '../API/axios.js'
+import { Toast } from '../API/toast.js'
 
 export class Requests {
     static async seeAllCompanies() {
@@ -12,6 +12,7 @@ export class Requests {
     }
 
     static async seeAllCompaniesBySectors(sector) {
+        console.log(sector);
         const companiesBySector = await instance
             .get(`/companies/${sector}`)
             .then(resp => resp.data)
@@ -28,7 +29,7 @@ export class Requests {
                 Toast.create('login realizado com sucesso', 'green')
 
                 setTimeout(() => {
-                    window.location.replace('src/pages/deshboard/deshboard.html')
+                    window.location.replace('src/pages/home/admin/admin.html')
                 },2000)
             })
             .catch((err) => {

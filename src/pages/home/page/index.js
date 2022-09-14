@@ -1,7 +1,7 @@
-import { List } from '../deshboard/list.js'
-import { RenderDeshboard } from '../deshboard/render.js'
-import { Modal } from '../modals/modal.js'
-import { Requests } from '../requests.js'
+import { List } from '../page/list.js'
+// import { RenderDeshboard } from '../deshboard/render.js'
+import { Modal } from "../modals/modal.js";
+import { Requests } from "../../API/requests.js"
 export class Index {
     // static renderIndexUser() {
     //     const token = localStorage.getItem('@kenzieEmpresas:token')
@@ -17,6 +17,7 @@ export class Index {
         
         loginBtn.addEventListener('click', () => {
             const newLoginModal = Modal.loginForm()
+
             Modal.template(newLoginModal)
             this.closeModal()
             this.handleLogin()
@@ -27,7 +28,7 @@ export class Index {
         const inputEmail        = document.getElementById('email-input');
         const InputPassword     = document.getElementById('password-input');
         const buttonLogin       = document.querySelector('.btn-input-login');
-        // const buttonSignup      = document.querySelector('.btn-input-signup');
+
 
         buttonLogin.addEventListener('click', async (event) => {
             event.preventDefault()
@@ -41,20 +42,6 @@ export class Index {
 
         })
 
-        // buttonSignup.addEventListener('click', () => {
-        //     const modal = document.querySelector('.modal')
-        //     modal.classList.add('disappear')
-
-        //     setTimeout(() => {
-        //         modal.remove()
-        //     },1000)
-
-        //     const newsignupModal = Modal.signupForm()
-
-        //     Modal.template(newsignupModal)
-        //     this.closeModal()
-        //     this.handleSignup()
-        // })
     }
 
     //  ====== SIGN UP MODAL ======
@@ -77,7 +64,6 @@ export class Index {
         const inputEmail            = document.getElementById('email-input');
         const InputPassword         = document.getElementById('password-input');
         const buttonSignup          = document.querySelector('.btn-input-signup');
-        // const buttonLogin           = document.querySelector('.btn-input-login');
 
         buttonSignup.addEventListener('click', async (event) => {
             event.preventDefault()
@@ -93,20 +79,6 @@ export class Index {
 
         })
 
-        // buttonLogin.addEventListener('click', () => {
-        //     const modal = document.querySelector('.modal')
-        //     modal.classList.add('disappear')
-
-        //     setTimeout(() => {
-        //         modal.remove()
-        //     },1000)
-
-        //     const newloginModal = Modal.loginForm()
-
-        //     Modal.template(newloginModal)
-        //     this.closeModal()
-        //     this.handleSignup()
-        // })
     }
 
     //  ====== CLOSE MODAL ======
