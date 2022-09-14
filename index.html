@@ -1,94 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/assets/favicon_created_by_logaster.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- BOXICONS CSS -->
-    <link 
-    rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 
     <!-- TOASTIFY -->
-    <link 
-        rel="stylesheet" 
-        type="text/css" 
-        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <link rel="stylesheet" href="./src/pages/deshboard/deshboard.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
-    <title>Kenzie Empresas - Deshboard</title>
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/darkMode.css">
+    <link rel="stylesheet" href="./src/styles/modal.css">
+
+
+    <title>Dashboard</title>
 </head>
-<body class="bg-body-color">
-    <div class="sidebar">
-        <div class="logo-details">
-            <img class="logo" src="./src/assets/LogoBranco.png" alt="Logo">
-            <span class="logo_name">Kenzie Empresas</span>
-        </div>
-        <ul class="nav-links">
-            <li class="dashboard-btn">
-                <a href="#">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="link_name">Dashboard</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Dashboard</a></li>
-                </ul>
 
-            </li>
-            <li class="btn-login">
-                <div class="iocn-link">
-                    <a href="#">
-                        <i class='bx bx-log-in icon'></i>
-                        <span class="link_name">Login</span>
-                    </a>
-                    <ul class="sub-menu blank">
-                        <li><a class="link_name" href="#">Login</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="btn-signup">
-                <div class="iocn-link">
-                    <a href="#">
-                        <i class='bx bx-user-plus icon'></i>
-                        <span class="link_name">Sign Up</span>
-                    </a>
-                    <ul class="sub-menu blank">
-                        <li><a class="link_name" href="#">Sign Up</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="profile-details">
-                    <div class="profile-content">
-                        <img class="profile" src="./src/assets/user-regular-24.pnggit checkout feat/homePage" alt="profileImg">
-                    </div>
-                    <div class="name-job">
-                        <div class="profile_name">nome user</div>
-                        <div class="job">cargo</div>
-                    </div>
-                    <i class='bx bx-log-out'></i>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <section class="home-section">
-        <div class="home-content">
-            <i class='bx bx-menu' ></i>
-            <span class="text">Drop Down Sidebar</span>
+<body class="body">
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line icon icon-0 menu"></i>
+            <h2>Kenzie<span>Empresas</span></h2>
         </div>
-        <article class="article">
-            <h1 class="article__title"></h1>
-        </article>
-        <aside class="aside"></aside>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search Scdule..">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <div class="notification--profile">
+                <div class="picon profile lock">
+                    <img src="./src/assets/user-regular-24.png" alt="">
+                </div>
+            </div>
+        </div>
     </section>
-    </div>
+    <section class="main">
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="#" id="active--link">
+                        <span class="icon icon-1"><i class="bx bx-grid-alt"></i></span>
+                        <span class="sidebar--item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-2"><i class="bx bx-sitemap"></i></span>
+                        <span class="sidebar--item">Sectors</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="sidebar--bottom-items">
+                    <li class="btn-login">
+                        <a href="#">
+                            <span class="icon icon-7"><i class="bx bx-log-in"></i></span>
+                            <span class="sidebar--item">Login</span>
+                        </a>
+                    </li>
+                    <li class="btn-signup">
+                        <a href="#">
+                            <span class="icon icon-8"><i class="bx bx-user-plus"></i></span>
+                            <span class="sidebar--item">Sign Up</span>
+                        </a>
+                    </li>
+                <div class="bottom-content">
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="main--content no--overflow-x">
+            <div class="overview">
+                <div class="title">
+                    <h2 class="section--title">Overview Sectors</h2>
+                    <select name="date" id="date" class="dropdown">
+                        <option value="today">Today</option>
+                        <option value="Alimenticio">Alimentício</option>
+                        <option value="Varejo">Varejo</option>
+                        <option value="Textil">Têxtil</option>
+                        <option value="Aeroespacial"> Aeroespacial</option>
+                        <option value="Automotiva"> Automotiva</option>
+                        <option value="TI"> TI</option>
+                        <option value="Atacado"> Atacado</option>
+                    </select>
+                </div>
+                <!-- Cards sectores -->
+                <div class="cards no--overflow-x">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="modal--container"></div>
+    </section>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="module" src="./src/pages/deshboard/deshboard.js"></script>
-    <script type="module" src="./src/pages/homePage/home.js"></script>
+
+    <script type="module" src="./src/pages/home/callFunctions.js"></script>
 </body>
+
 </html>

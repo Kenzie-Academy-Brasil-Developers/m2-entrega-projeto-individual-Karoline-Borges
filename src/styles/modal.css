@@ -1,5 +1,5 @@
-.model{
-    background-color: red;
+.modal{
+    /* background-color: red; */
     width: 100vh;
     height: 100vh;
     position: fixed;

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/favicon_created_by_logaster.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- BOXICONS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <link rel="stylesheet" href="../../../styles/global.css">
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/darkMode.css">
+    <link rel="stylesheet" href="../../../styles/modal.css">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line icon icon-0 menu"></i>
+            <h2>Kenzie<span>Empresas</span></h2>
+        </div>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search Scdule..">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <div class="notification--profile">
+                <div class="picon profile lock">
+                    <img src="../../../assets/user-regular-24.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="#" id="active--link">
+                        <span class="icon icon-1"><i class="bx bx-grid-alt"></i></span>
+                        <span class="sidebar--item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-2"><i class="bx bx-sitemap"></i></span>
+                        <span class="sidebar--item">Sectors</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-3"><i class="bx bx-buildings"></i></span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Companys</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-4"><i class="bx bx-store-alt"></i></span>
+                        <span class="sidebar--item">Department</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar--bottom-items">
+                <li>
+                    <a href="#">
+                        <span class="icon icon-7"><i class="ri-settings-3-line"></i></span>
+                        <span class="sidebar--item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+
+                <div class="bottom-content">
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+
+            </ul>
+        </div>
+
+
+           
+                
+                <!-- Cards sectores -->
+                <!-- <div class="cards">
+                    
+                </div> -->
+
+
+        <div class="main--content">
+            <div class="overview">
+                <div class="title">
+                    <h2 class="section--title">Overview</h2>
+                    <select name="date" id="date" class="dropdown">
+                        <option value="today">Today</option>
+                        <option value="Alimenticio">Alimentício</option>
+                        <option value="Varejo">Varejo</option>
+                        <option value="Textil">Têxtil</option>
+                        <option value="Aeroespacial"> Aeroespacial</option>
+                        <option value="Automotiva"> Automotiva</option>
+                        <option value="TI"> TI</option>
+                        <option value="Atacado"> Atacado</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <!-- CARDSto -->
+                </div>
+            </div>
+            <div class="employees">
+                <div class="title">
+                    <h2 class="section--title">Employees</h2>
+                    <div class="employees--right--btns">
+                        <select name="date" id="date" class="dropdown employee--filter">
+                            <option >Filter</option>
+                            <option value="free">Free</option>
+                            <option value="scheduled">Scheduled</option>
+                        </select>
+                        <button class="add"><i class="ri-add-line"></i>Add Employee</button>
+                    </div>
+                </div>
+                <div class="employees--cards">
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee1.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="free">Free</p>
+                    </a>
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee2.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee3.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee4.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="free">Free</p>
+                    </a>
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee5.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee6.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="free">Free</p>
+                    </a>
+                    <a href="#" class="employee--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/employee7.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                </div>
+            </div>
+            <div class="recent--patients">
+                <div class="title">
+                    <h2 class="section--title">Recent Patients</h2>
+                    <button class="add"><i class="ri-add-line"></i>Add Company</button>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>departamento</th>
+                                <th>descrição</th>
+                                <th>empresa</th>
+                                <th>horario</th>
+                                <th>descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TI</td>
+                                <td>Departamento de TI</td>
+                                <td>Nerd la</td>
+                                <td>09:00</td>
+                                <td>Criamos um site rapidão pra você</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script type="module" src="../../../pages/home/admin/callFunctionsAdmin.js"></script>
+</body>
+
+</html>

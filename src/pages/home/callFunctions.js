@@ -1,6 +1,15 @@
-import { Index } from "./index.js"
-import { Requests } from "../requests.js"
-import { Render } from "./render.js"
+import { Nave } from "./nave/menu.js";
+import { ShowOnScreen } from "./page/company.js";
+import { Create } from "./page/don.js";
+import { Render } from "./page/render.js";
+import { Index } from "./page/index.js"
+
+import { Requests } from "../API/requests.js"
+
+
+
+Nave.menu()
+Nave.darkMode()
 
 
 Index.handleLoginModal()
@@ -8,11 +17,10 @@ Index.handleSignupModal()
 
 // Mostrar as empresas cadastradas
 
-// Render.renderCompanies()
+Render.renderCompanies()
 
 // Filtrar as empresas por seções
 
-// Render.renderBySector()
 // await Requests.seeAllCompaniesBySectors('Varejo')
 // await Requests.seeAllCompaniesBySectors('Textil')
 // await Requests.seeAllCompaniesBySectors('Manufatura')

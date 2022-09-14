@@ -1,27 +1,33 @@
-import { Modal } from "../modals/modal.js";
-import { Requests } from "../requests.js"
+import { Create } from "../page/don.js";
+import { Requests } from "../../API/requests.js"
+import { ShowOnScreen } from "./company.js";
 
 export class Render {
-    static list(array, title) {
+    static list(array) {
         array.forEach(element => {
             const card = Create.createCardCompany(element)
-            Modal.template(card, title)
+
+            ShowOnScreen.templateCards(card)
         });
     }
     
     static async renderCompanies() {
         const companies = await Requests.seeAllCompanies()
-        const title     = 'Listas de Empresas Parceiras'
 
-        this.list(companies, title)
+        this.list(companies)
     }
 
     static async renderBySector() {
-        // const ulSectors  = document.querySelector('.container__ul')
-        // ulSectors.addEventListener('click', (event) => {
-        //     event.preventDefault()
-        //     const btnSector = event.target
-        //     console.log(btnSector);
+        const filterSectors  = document.getElementById('date')
+        filterSectors.addEventListener('click', async () => {
+            this.renderBySector()
+            const sector = filterSectors.value
+            
+            const sectors    =  await Requests.seeAllCompaniesBySectors(sector)
+            console.log(sectors);
+            
+            this.list(sectors)
+
         //     // if(btnSector === 'BUTTON') {
         //     //     const sector = li.value
                 
@@ -30,17 +36,13 @@ export class Render {
 
         //     //     this.list(sectors, title)
         //     // }
-        // })
-        const sector = 'Alimenticio'
+        })
+        // const sector = 'Alimenticio'
             
-            const sectors    = await Requests.seeAllCompaniesBySectors(sector)
-            const title      = `Listas de Empresas na seção de ${sector}`
-
-            this.list(sectors, title)
     }
 }
 
-export class Create {
+export class Create1 {
     static createCardCompany(array) {
         const ulTag             = document.createElement('ul');
         const liTag             = document.createElement('li');

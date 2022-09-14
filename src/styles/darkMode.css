@@ -1,0 +1,96 @@
+
+.sidebar .mode{
+    margin-top: 5.2px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.sidebar .mode .sun-moon{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .mode .sun-moon i{
+    position: absolute;
+    transition: all 0.3s ease;
+    margin-right: 0;
+}
+.sidebar .mode .sun-moon i.sun{
+    opacity: 0;
+}
+body.dark .mode .sun-moon i.sun{
+    opacity: 1;
+}
+body.dark .mode .sun-moon i.moon{
+    opacity: 0;
+}
+
+.bottom-content .toggle-switch{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.toggle-switch .switch{
+    background: var(--color-white);
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--color-hover);
+    transition: all 0.4s ease;
+}
+
+body.dark .switch::before{
+    left: 20px;
+    background-color: var(--sidebar-color);
+}
+
+body.dark {
+    color: var(--toggle-color);
+    background-color: var(--sidebar-color);
+}
+
+body.dark .sidebar{
+    color: var(--toggle-color);
+    background-color: var(--sidebar-color);
+}
+
+body.dark .sidebar--items a,
+body.dark .sidebar--bottom-items a {
+    color: var(--toggle-color);
+}
+
+body.dark .sidebar--items a:hover,
+body.dark .sidebar--bottom-items a:hover {
+    background-color: var(--toggle-color);
+    color: var(--sidebar-color);
+}
+body.dark #active--link {
+    background-color: var(--toggle-color);
+    color: var(--sidebar-color);
+}
